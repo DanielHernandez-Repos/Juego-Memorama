@@ -28,7 +28,7 @@ Abre `memoramaDaniel.html` en tu navegador o sírvelo con una extensión como *L
 
 ```
 JuegoMemorama/
-├── memoramaDaniel.html   # Página principal del juego
+├── Index.html   # Página principal del juego
 ├── css/
 │   └── memo.css          # Estilos del tablero y las cartas
 ├── Js/
