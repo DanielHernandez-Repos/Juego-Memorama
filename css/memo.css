@@ -1,0 +1,81 @@
+
+body{
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: rgb(9, 40, 41);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: grid;
+    grid-gap: 10px;
+    /*indicamos el numero de columnas*/
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2.5%;
+}
+
+figure,
+figure img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    /*indicamos en que grados rotara la imagen*/
+    transform: perspective(600px) rotateY(0deg);
+    cursor: pointer;
+    box-shadow: 3px 3px 16px rgb(0, 0, 0, 0.6);
+}
+
+figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    /*indicamos el numero de transicion de las imagenes cuando pasamos sobre ellas*/
+    transition: 0.3s all ease;
+}
+
+figure:hover:after {
+    background: rgba(255, 255, 255, 0.137);
+}
+
+figure.opened {
+    /*indicamos en que grados rotara la imagen*/
+    transform: perspective(600px) rotateY(180deg);
+}
+
+figure .todo {
+    display: block;
+    backface-visibility: hidden;
+}
+
+figure .searched-image {
+    position: absolute;
+    top: 0;
+    /*indicamos en que grados rotara la imagen*/
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+}
