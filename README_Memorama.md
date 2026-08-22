@@ -73,4 +73,4 @@ Este proyecto se distribuye bajo la licencia MIT. Eres libre de usarlo y modific
 
 ## 🙋 Autor
 
-Proyecto desarrollado por Daniel.
+Proyecto desarrollado por Daniel Jesús Hernández Hernández.
